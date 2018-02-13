@@ -44,13 +44,13 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            python cv_hm2.py -i1 1-in000001.jpg -i2 1-in001148.jpg -m TL -t 35 > output/output_1_tl.txt
+            python cv_hm2.py -i1 1-in000001.jpg -i2 1-in001148.jpg -m LS -t 35 > output/output_1_tl.txt
             python cv_hm2.py -i1 1-in000001.jpg -i2 1-in001148.jpg -m RO -t 35 > output/output_1_ro.txt
             python cv_hm2.py -i1 1-in000001.jpg -i2 1-in001148.jpg -m GA -t 0.7 > output/output_1_ga.txt
-            python cv_hm2.py -i1 2-in000001.jpg -i2 2-in001800.jpg -m TL -t 35 > output/output_2_tl.txt
+            python cv_hm2.py -i1 2-in000001.jpg -i2 2-in001800.jpg -m LS -t 35 > output/output_2_tl.txt
             python cv_hm2.py -i1 2-in000001.jpg -i2 2-in001800.jpg -m RO -t 35 > output/output_2_ro.txt
             python cv_hm2.py -i1 2-in000001.jpg -i2 2-in001800.jpg -m GA -t 0.7 > output/output_2_ga.txt
-            python cv_hm2.py -i1 3-in000001.jpg -i2 3-in000500.jpg -m TL -t 35 > output/output_3_tl.txt
+            python cv_hm2.py -i1 3-in000001.jpg -i2 3-in000500.jpg -m LS -t 35 > output/output_3_tl.txt
             python cv_hm2.py -i1 3-in000001.jpg -i2 3-in000500.jpg -m RO -t 35 > output/output_3_ro.txt
             python cv_hm2.py -i1 3-in000001.jpg -i2 3-in000500.jpg -m GA -t 0.7 > output/output_3_ga.txt
             mkdir /home/circleci/repo/test-reports
