@@ -17,8 +17,8 @@ class FittingModels:
         test_image_return = np.zeros((100, 100), np.uint8) #test remove before submission
         return test_image_return
 
-    def fit_line_tls(self, data_points, threshold):
-        """ Fits a line to the given data points using total least squares
+    def fit_line_ls(self, data_points, threshold):
+        """ Fits a line to the given data points using least squares
         :param data_points: a list of data points
         :param threshold: a threshold value (if > threshold, imples outlier)
         :return: a tuple containing the followings:
@@ -27,7 +27,7 @@ class FittingModels:
                     * A segmented image
         """
         test_image_return = np.zeros((100,100), np.uint8)#test remove before submission
-        print("TLS")
+        print("LS")
         return (test_image_return, test_image_return, test_image_return)
 
     def fit_line_robust(self, data_points, threshold):

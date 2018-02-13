@@ -1,7 +1,7 @@
 """cv_hw2.py: Starter file to run howework 2"""
 
 #Example Usage: ./cv_hw2 -i1 image1 -i2 image2 -t threshold -m GA
-#Example Usage: python cv_hw2.py -i1 image1 -i2 image2 -t threshold -m TL
+#Example Usage: python cv_hw2.py -i1 image1 -i2 image2 -t threshold -m LS
 
 import cv2
 import sys
@@ -22,7 +22,7 @@ def display_image(window_name, image):
 
 
 def main():
-    models = ['TL', 'RO', 'GA']
+    models = ['LS', 'RO', 'GA']
 
     parser = argparse.ArgumentParser()
     parser.add_argument("-i1", "--img1_path", dest="img1_path", help="Specify the path to the first image",
@@ -30,9 +30,9 @@ def main():
     parser.add_argument("-i2", "--img2_path", dest="img2_path", help="Specify the path to the second image",
                         required=True)
     parser.add_argument("-m", "--model", dest="model",
-                        help="Specify the fitting model (TL - total least squares, RO - robust fitting, GA - Gaussian Model",
-                        required=True, type=str, choices = ['TL', 'RO', 'GA'])
-    parser.add_argument("-t", "--threshold", dest="threshold", help="Specify the threshold value, TL and RO - any value, [0,1] - GA", required=True, type=float)
+                        help="Specify the fitting model (LS - least squares, RO - robust fitting, GA - Gaussian Model",
+                        required=True, type=str, choices = ['LS', 'RO', 'GA'])
+    parser.add_argument("-t", "--threshold", dest="threshold", help="Specify the threshold value, LS and RO - any value, [0,1] - GA", required=True, type=float)
 
 
     args = parser.parse_args()
@@ -63,15 +63,15 @@ def main():
     output_path = output_dir + "plotted_data" + "_" + datetime.now().strftime("%m%d-%H%M%S") + ".jpg"
     cv2.imwrite(output_path, data)
 
-    if args.model == 'TL':
-        # Fitting a line to the data using total least square
-        line_fitting_tls, thresholded_tls, segmented_tls = fitting_object.fit_line_tls(data_points, args.threshold)
-        output_path = output_dir + "line_fitting_tls_" + str(args.threshold) + "_" + datetime.now().strftime("%m%d-%H%M%S") + ".jpg"
-        cv2.imwrite(output_path, line_fitting_tls)
-        output_path = output_dir + "thresholded_tls_" + str(args.threshold) + "_" + datetime.now().strftime("%m%d-%H%M%S") + ".jpg"
-        cv2.imwrite(output_path, thresholded_tls)
-        output_path = output_dir + "segmented_tls_" + str(args.threshold) + "_" + datetime.now().strftime("%m%d-%H%M%S") + ".jpg"
-        cv2.imwrite(output_path, segmented_tls)
+    if args.model == 'LS':
+        # Fitting a line to the data using least square
+        line_fitting_ls, thresholded_ls, segmented_ls = fitting_object.fit_line_ls(data_points, args.threshold)
+        output_path = output_dir + "line_fitting_ls_" + str(args.threshold) + "_" + datetime.now().strftime("%m%d-%H%M%S") + ".jpg"
+        cv2.imwrite(output_path, line_fitting_ls)
+        output_path = output_dir + "thresholded_ls_" + str(args.threshold) + "_" + datetime.now().strftime("%m%d-%H%M%S") + ".jpg"
+        cv2.imwrite(output_path, thresholded_ls)
+        output_path = output_dir + "segmented_ls_" + str(args.threshold) + "_" + datetime.now().strftime("%m%d-%H%M%S") + ".jpg"
+        cv2.imwrite(output_path, segmented_ls)
 
     if args.model == 'RO':
         # Fitting a line to the data using robust estimators
