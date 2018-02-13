@@ -9,10 +9,10 @@ Create data points:
 
   - Starter code available in directory fitting/
   - fitting/models.py: Put your code in "create_dataPoints". You are welcome to add more function or add nested functions with in the function.
-  - Make sure the function returns and object with data points (List, tuple,...)
+  - Make sure the function returns an object with data points (List, tuple,...)
   - For this part of the assignment, please implement your own code for all computations, do not use inbuilt functions like from numpy, opencv or other libraries for clustering or segmentation.
   - Describe your method and findings in your report
-  - This part of the assignment can be run using cv_hw1.py (there is no need to edit this file)
+  - This part of the assignment can be run using cv_hw2.py (there is no need to edit this file)
   - Usage: 
   
             ./cv_hm2 -i1 image1 -i2 image2 -m TL -t 20
