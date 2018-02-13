@@ -20,7 +20,7 @@ class FittingModels:
     def fit_line_tls(self, data_points, threshold):
         """ Fits a line to the given data points using total least squares
         :param data_points: a list of data points
-        :param threshold: a threshold value
+        :param threshold: a threshold value (if > threshold, imples outlier)
         :return: a tuple containing the followings:
                     * An image showing the line along with the data points
                     * The thresholded image
@@ -33,7 +33,7 @@ class FittingModels:
     def fit_line_robust(self, data_points, threshold):
         """ Fits a line to the given data points using robust estimators
         :param data_points: a list of data points
-        :param threshold: a threshold value
+        :param threshold: a threshold value (if > threshold, imples outlier)
         :return: a tuple containing the followings:
                     * An image showing the line along with the data points
                     * The thresholded image
@@ -46,6 +46,7 @@ class FittingModels:
     def fit_gaussian(self, data_points, threshold):
         """ Fits the data points to a gaussian
         :param data_points: a list of data points
+        :param threshold: a threshold value (if < threshold, imples outlier)
         :return: a tuple containing the followings:
                     * An image showing the gaussian along with the data points
                     * The thresholded image
