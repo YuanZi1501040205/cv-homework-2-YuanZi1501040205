@@ -1,7 +1,7 @@
 """cv_hw2.py: Starter file to run howework 2"""
 
-#Example Usage: ./cv_hw2 -i1 image1 -i2 image2 -t threshold
-#Example Usage: python cv_hw2.py -i1 image1 -i2 image2 -t threshold
+#Example Usage: ./cv_hw2 -i1 image1 -i2 image2 -t threshold -m GA
+#Example Usage: python cv_hw2.py -i1 image1 -i2 image2 -t threshold -m TL
 
 import cv2
 import sys
