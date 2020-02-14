@@ -1,7 +1,7 @@
 # Computer Vision
 Homework #2
 
-Due: Tu 02/27/18 11:59 PM
+Due: Tu 03/07/20 11:00 PM
 See Homework - 2 description file (Homework-2.pdf) for details.
 
 Create data points:
@@ -10,7 +10,7 @@ Create data points:
   - Starter code available in directory fitting/
   - fitting/models.py: Put your code in "create_dataPoints". You are welcome to add more function or add nested functions with in the function.
   - Make sure the function returns an object with data points (List, tuple,...)
-  - For this part of the assignment, please implement your own code for all computations, do not use inbuilt functions like from numpy, opencv or other libraries for clustering or segmentation.
+  - For this part of the assignment, please implement your own code for all computations, do not use inbuilt functions from numpy, scipy, sklearn, opencv or other libraries for clustering or segmentation.
   - Describe your method and findings in your report
   - This part of the assignment can be run using cv_hw2.py (there is no need to edit this file)
   - Usage: 
@@ -28,7 +28,7 @@ Plot data points:
   - Starter code available in directory fitting/
   - fitting/models.py: Put your code in "plot_data". You are welcome to add more function or add nested functions with in the function.
   - Make sure the function returns an image with datapoints plotted
-  - For this part of the assignment, please implement your own code for all computations, do not use inbuilt functions like from numpy, opencv or other libraries for clustering or segmentation.
+  - For this part of the assignment, please implement your own code for all computations, do not use inbuilt functions from numpy, scipy, sklearn, opencv or other libraries for clustering or segmentation.
   - Describe your method and findings in your report
   - This part of the assignment can be run using cv_hm2.py (there is no need to edit this file)
   - Usage: 
@@ -41,11 +41,11 @@ Plot data points:
   
 -------------
 Total least square fitting:
-(4 Pts.) Write code to fit a line using total least square, identify outliers and segmented image with the changes pixels.
+(4 Pts.) Write code to fit a line using total least square, identify outliers and segmented image with the change pixels.
   - Starter code available in directory fitting/
   - fitting/models.py: Put your code in "fit_line_tls". You are welcome to add more function or add nested functions with in the function.
   - Make sure the function returns a tuple of three images (fitted line, thresholded image and segmented image) 
-  - For this part of the assignment, please implement your own code for all computations, do not use inbuilt functions like from numpy, opencv or other libraries for clustering or segmentation.
+  - For this part of the assignment, please implement your own code for all computations, do not use inbuilt functions from numpy, scipy, sklearn, opencv or other libraries for clustering or segmentation.
   - Describe your method and findings in your report
   - This part of the assignment can be run using cv_hm2.py (there is no need to edit this file)
   - Usage: 
@@ -58,12 +58,12 @@ Total least square fitting:
   
  -------------
  Robust estimation:
-(3 Pts.) Write code to fit a line using robust estimators, identify outliers and segmented image with the changes pixels.
+(3 Pts.) Write code to fit a line using robust estimators, identify outliers and segmented image with the change pixels.
   - Starter code available in directory fitting/
   - fitting/models.py: Put your code in "fit_line_robust". You are welcome to add more function or add nested functions with in the function.
   - Make sure the function returns a tuple of three images (fitted line, thresholded image and segmented image) 
   - For this part of the assignment, please implement your own code for all computations.
-  - Exception, You are welcome to use the fitLinea function from opencv
+  - Exception, You are welcome to use the fitLine function from opencv
   - Describe your method and findings in your report
   - This part of the assignment can be run using cv_hm2.py (there is no need to edit this file)
   - Usage: 
@@ -76,11 +76,11 @@ Total least square fitting:
   
   -------------
  Gaussian Fitting:
-(4 Pts.) Write code to fit a gaussian model, identify outliers and segmented image with the changes pixels.
+(4 Pts.) Write code to fit a gaussian model, identify outliers and segmented image with the change pixels.
   - Starter code available in directory fitting/
   - fitting/models.py: Put your code in "fit_gaussian". You are welcome to add more function or add nested functions with in the function.
   - Make sure the function returns a tuple of three images (fitted line, thresholded image and segmented image) 
-  - For this part of the assignment, please implement your own code for all computations, do not use inbuilt functions like from numpy, opencv or other libraries for clustering or segmentation.
+  - For this part of the assignment, please implement your own code for all computations, do not use inbuilt functions from numpy, scipy, sklearn, opencv or other libraries for clustering or segmentation.
   - Describe your method and findings in your report
   - This part of the assignment can be run using cv_hm2.py (there is no need to edit this file)
   - Usage: 
@@ -119,7 +119,7 @@ Do not display images in your final submission.
 Example, cv2.imshow(), cv2.waitkey(), cv2.NamedWindow will make the circle ci fail.
 
 PS. Files not to be changed: requirements.txt and .circleci directory 
-If you do not like the structure, you are welcome to change the over all code, under two stipulations:
+If you do not like the structure, you are welcome to change the overall code, under two stipulations:
 
 1. the homework has to run using command
 
