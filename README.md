@@ -1,7 +1,7 @@
 # Computer Vision
 Homework #2
 
-Due: Tu 03/07/20 11:00 PM
+Due: 03/07/20 11:00 PM
 See Homework - 2 description file (Homework-2.pdf) for details.
 
 Create data points:
@@ -94,7 +94,7 @@ Total least square fitting:
   -------------
 3. (2 Pts.) Describe your method and report you findings in your report for each of the fittings in assignemnt.
   - Your report should accompany your code. 
-  - Include a word/pdf file in the repository.
+  - Include a pdf file in the repository.
   - In your report also decribe the following points
   
     a. What are the parameters that influence your algorithm? Explain their effect?
@@ -119,7 +119,8 @@ Do not display images in your final submission.
 Example, cv2.imshow(), cv2.waitkey(), cv2.NamedWindow will make the circle ci fail.
 
 PS. Files not to be changed: requirements.txt and .circleci directory 
-If you do not like the structure, you are welcome to change the overall code, under two stipulations:
+
+Your solution needs to ensure that:
 
 1. the homework has to run using command
 
@@ -130,7 +131,7 @@ If you do not like the structure, you are welcome to change the overall code, un
  
 
   
-2. Any output file or image should be written to output/ folder
+2. any output file or image should be written to output/ folder
 
 The TA will only be able to see your results if these two conditions are met
 
