@@ -1,7 +1,7 @@
 # Computer Vision
 Homework #2
 
-Due: 03/07/20 11:00 PM
+Due: 03/08/20 11:00 PM
 See Homework - 2 description file (Homework-2.pdf) for details.
 
 Create data points:
