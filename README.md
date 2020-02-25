@@ -43,7 +43,7 @@ Plot data points:
 Total least square fitting:
 (4 Pts.) Write code to fit a line using total least square, identify outliers and segmented image with the change pixels.
   - Starter code available in directory fitting/
-  - fitting/models.py: Put your code in "fit_line_tls". You are welcome to add more function or add nested functions with in the function.
+  - fitting/models.py: Put your code in "fit_line_ls". You are welcome to add more function or add nested functions with in the function.
   - Make sure the function returns a tuple of three images (fitted line, thresholded image and segmented image) 
   - For this part of the assignment, please implement your own code for all computations, do not use inbuilt functions from numpy, scipy, sklearn, opencv or other libraries for clustering or segmentation.
   - Exception: You are welcome to the line function from opencv to draw.
