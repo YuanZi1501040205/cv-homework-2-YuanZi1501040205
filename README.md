@@ -15,9 +15,9 @@ Create data points:
   - This part of the assignment can be run using cv_hw2.py (there is no need to edit this file)
   - Usage: 
   
-            ./cv_hm2 -i1 image1 -i2 image2 -m TL -t 20
+            ./cv_hm2 -i1 image1 -i2 image2 -m LS -t 20
   
-            python cv_hm2.py -i1 image1 -i2 image2 -m TL -t 20
+            python cv_hm2.py -i1 image1 -i2 image2 -m LS -t 20
   - Please make sure your code runs when you run the above command from prompt/terminal
   - Any output images or files must be saved to "output/" folder (cv_hm2.py automatically does this)
   
@@ -33,9 +33,9 @@ Plot data points:
   - This part of the assignment can be run using cv_hm2.py (there is no need to edit this file)
   - Usage: 
   
-            ./cv_hm2 -i1 image1 -i2 image2 -m TL -t 20
+            ./cv_hm2 -i1 image1 -i2 image2 -m LS -t 20
   
-            python cv_hm2.py -i1 image1 -i2 image2 -m TL -t 20
+            python cv_hm2.py -i1 image1 -i2 image2 -m LS -t 20
   - Please make sure your code runs when you run the above command from prompt/terminal
   - Any output images or files must be saved to "output/" folder (cv_hm2.py automatically does this)
   
@@ -46,13 +46,14 @@ Total least square fitting:
   - fitting/models.py: Put your code in "fit_line_tls". You are welcome to add more function or add nested functions with in the function.
   - Make sure the function returns a tuple of three images (fitted line, thresholded image and segmented image) 
   - For this part of the assignment, please implement your own code for all computations, do not use inbuilt functions from numpy, scipy, sklearn, opencv or other libraries for clustering or segmentation.
+  - Exception: You are welcome to the line function from opencv to draw.
   - Describe your method and findings in your report
   - This part of the assignment can be run using cv_hm2.py (there is no need to edit this file)
   - Usage: 
   
-            ./cv_hm2 -i1 image1 -i2 image2 -m TL -t 20
+            ./cv_hm2 -i1 image1 -i2 image2 -m LS -t 20
   
-            python cv_hm2.py -i1 image1 -i2 image2 -m TL -t 20
+            python cv_hm2.py -i1 image1 -i2 image2 -m LS -t 20
   - Please make sure your code runs when you run the above command from prompt/terminal
   - Any output images or files must be saved to "output/" folder (cv_hm2.py automatically does this)
   
@@ -63,8 +64,8 @@ Total least square fitting:
   - fitting/models.py: Put your code in "fit_line_robust". You are welcome to add more function or add nested functions with in the function.
   - Make sure the function returns a tuple of three images (fitted line, thresholded image and segmented image) 
   - For this part of the assignment, please implement your own code for all computations.
-  - Exception, You are welcome to use the fitLine function from opencv
-  - Describe your method and findings in your report
+  - Exception: You are welcome to use the fitLine function from opencv as well as the line function from opencv to draw.
+  - Describe your method and findings in your report.
   - This part of the assignment can be run using cv_hm2.py (there is no need to edit this file)
   - Usage: 
   
@@ -81,7 +82,8 @@ Total least square fitting:
   - fitting/models.py: Put your code in "fit_gaussian". You are welcome to add more function or add nested functions with in the function.
   - Make sure the function returns a tuple of three images (fitted line, thresholded image and segmented image) 
   - For this part of the assignment, please implement your own code for all computations, do not use inbuilt functions from numpy, scipy, sklearn, opencv or other libraries for clustering or segmentation.
-  - Describe your method and findings in your report
+  - Exception: You are welcome to use linalg from numpy to compute eigen values to help draw the estimated Gaussian.  Please note that drawing is needed to generate the fitted image corresponding to this function that has to be returned. 
+  - Describe your method and findings in your report.
   - This part of the assignment can be run using cv_hm2.py (there is no need to edit this file)
   - Usage: 
   
