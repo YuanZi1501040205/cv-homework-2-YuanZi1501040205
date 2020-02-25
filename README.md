@@ -126,10 +126,10 @@ Your solution needs to ensure that:
 
 1. the homework has to run using command
 
-  python cv_hm2.py -i1 image1 i2 image 2 -m TL -t 20,
-  python cv_hm2.py -i1 image1 i2 image 2 -m RO it 20
+  python cv_hm2.py -i1 image1 i2 image 2 -m LS -t 20,
+  python cv_hm2.py -i1 image1 i2 image 2 -m RO -t 20
   and
-  python cv_hm2.py -i1 image1 i2 image 2 -m GA -t 20
+  python cv_hm2.py -i1 image1 i2 image 2 -m GA -t 0.7
  
 
   
