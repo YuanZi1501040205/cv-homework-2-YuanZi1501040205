@@ -49,20 +49,24 @@ def main():
         print("The path to the second image is incorrect\n")
         sys.exit()
 
-
-    
+# %%
+    import cv2
+    from fitting.models import FittingModels
+    from datetime import datetime
+    image1 = cv2.imread('2-in000001.jpg')
+    image2 = cv2.imread('2-in001800.jpg')
     fitting_object = FittingModels()
 
     # Creating data points
     data_points = fitting_object.create_dataPoints(image1, image2)
 
     output_dir = 'output/'
-
+# %%
     # Plotting the data points
     data = fitting_object.plot_data(data_points)
     output_path = output_dir + "plotted_data" + "_" + datetime.now().strftime("%m%d-%H%M%S") + ".jpg"
     cv2.imwrite(output_path, data)
-
+# %%
     if args.model == 'LS':
         # Fitting a line to the data using least square
         line_fitting_ls, thresholded_ls, segmented_ls = fitting_object.fit_line_ls(data_points, args.threshold)
