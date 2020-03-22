@@ -1,5 +1,9 @@
 import numpy as np
-
+# %%
+import cv2
+image1 = cv2.imread('/home/cougarnet.uh.edu/yzi2/PycharmProjects/cv-homework-2-YuanZi1501040205/2-in000001.jpg')
+image2 = cv2.imread('/home/cougarnet.uh.edu/yzi2/PycharmProjects/cv-homework-2-YuanZi1501040205/2-in001800.jpg')
+# %%
 class FittingModels:
 
     def create_dataPoints(self, image1, image2):
@@ -8,6 +12,10 @@ class FittingModels:
         :param image2: second image
         :return: a list of data points
         """
+        image1 = cv2.cvtColor(image1, cv2.COLOR_BGR2GRAY)
+        image2 = cv2.cvtColor(image2, cv2.COLOR_BGR2GRAY)
+        points = []
+        for i in range()
 
     def plot_data(self, data_points):
         """ Plots the data points
