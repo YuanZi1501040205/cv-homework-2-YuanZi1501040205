@@ -4,7 +4,7 @@ import cv2
 # image2 = cv2.imread('/home/cougarnet.uh.edu/yzi2/PycharmProjects/cv-homework-2-YuanZi1501040205/2-in001800.jpg')
 # from scipy.odr import Model, Data, ODR
 # from scipy.stats import linregress
-from sklearn import linear_model
+# from sklearn import linear_model
 import math
 import random
 from matplotlib.patches import Ellipse
