@@ -66,7 +66,7 @@ def main():
 
     if args.model == 'LS':
         # Fitting a line to the data using least square
-        line_fitting_ls, thresholded_ls, segmented_ls = fitting_object.fit_line_ls(data_points, args.threshold)
+        line_fitting_ls, thresholded_ls, segmented_ls = fitting_object.fit_line_ls(data_points, args.threshold, image1)
         output_path = output_dir + "line_fitting_ls_" + str(args.threshold) + "_" + datetime.now().strftime("%m%d-%H%M%S") + ".jpg"
         cv2.imwrite(output_path, line_fitting_ls)
         output_path = output_dir + "thresholded_ls_" + str(args.threshold) + "_" + datetime.now().strftime("%m%d-%H%M%S") + ".jpg"
@@ -76,7 +76,7 @@ def main():
 
     if args.model == 'RO':
         # Fitting a line to the data using robust estimators
-        line_fitting_robust, thresholded_robust, segmented_robust = fitting_object.fit_line_robust(data_points, args.threshold)
+        line_fitting_robust, thresholded_robust, segmented_robust = fitting_object.fit_line_robust(data_points, args.threshold, image1)
         output_path = output_dir + "line_fitting_robust_" + str(args.threshold) + "_" + datetime.now().strftime("%m%d-%H%M%S") + ".jpg"
         cv2.imwrite(output_path, line_fitting_robust)
         output_path = output_dir + "thresholded_robust_" + str(args.threshold) + "_" + datetime.now().strftime("%m%d-%H%M%S") + ".jpg"
