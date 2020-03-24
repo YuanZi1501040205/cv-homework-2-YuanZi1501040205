@@ -9,28 +9,28 @@ import math
 import random
 from matplotlib.patches import Ellipse
 
-# total least square linear regression
-def orthoregress(x, y):
-    """Perform an Orthogonal Distance Regression on the given data,
-    using the same interface as the standard scipy.stats.linregress function.
-    Arguments:
-    x: x data
-    y: y data
-    Returns:
-    [m, c, nan, nan, nan]
-    Uses standard ordinary least squares to estimate the starting parameters
-    then uses the scipy.odr interface to the ODRPACK Fortran code to do the
-    orthogonal distance calculations.
-    """
-    linreg = linregress(x, y)
-    mod = Model(f)
-    dat = Data(x, y)
-    od = ODR(dat, mod, beta0=linreg[0:2])
-    out = od.run()
-    return list(out.beta)
-def f(p, x):
-    """Basic linear regression 'model' for use with ODR"""
-    return (p[0] * x) + p[1]
+# # total least square linear regression
+# def orthoregress(x, y):
+#     """Perform an Orthogonal Distance Regression on the given data,
+#     using the same interface as the standard scipy.stats.linregress function.
+#     Arguments:
+#     x: x data
+#     y: y data
+#     Returns:
+#     [m, c, nan, nan, nan]
+#     Uses standard ordinary least squares to estimate the starting parameters
+#     then uses the scipy.odr interface to the ODRPACK Fortran code to do the
+#     orthogonal distance calculations.
+#     """
+#     linreg = linregress(x, y)
+#     mod = Model(f)
+#     dat = Data(x, y)
+#     od = ODR(dat, mod, beta0=linreg[0:2])
+#     out = od.run()
+#     return list(out.beta)
+# def f(p, x):
+#     """Basic linear regression 'model' for use with ODR"""
+#     return (p[0] * x) + p[1]
 
 #maximum likelihood linear regression
 #   define a function to calculate the log likelihood
