@@ -230,7 +230,7 @@ class FittingModels:
 
         # A = m B = 1 C = b
 
-        d = abs(m * X - Y + b) / (np.sqrt(m ** 2 + 1 ** 2))
+        d = abs(m * X - Y + c) / (np.sqrt(m ** 2 + 1 ** 2))
 
         # print(d[0:5], "d")
 
