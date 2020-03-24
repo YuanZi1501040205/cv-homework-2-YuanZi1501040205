@@ -307,7 +307,7 @@ class FittingModels:
         print("RO")
         return (im_line_fitting_ls, thresholded_ls, img_dilation)
 
-    def fit_gaussian(self, data_points, threshold):
+    def fit_gaussian(self, data_points, threshold, image1):
         """ Fits the data points to a gaussian
         :param data_points: a list of data points
         :param threshold: a threshold value (if < threshold, imples outlier)
@@ -406,7 +406,7 @@ class FittingModels:
         plt.savefig('plotcache.png')
         GA_thresh_img = cv2.imread('plotcache.png')
         os.remove('plotcache.png')
-        GA_seg_img = np.reshape(segmentation, (240, 320))
+        GA_seg_img = np.reshape(segmentation, (image1.shape[0], image1.shape[1]))
 
         # Taking a matrix of size 3 as the kernel
         kernel = np.ones((5, 5), np.uint8)
