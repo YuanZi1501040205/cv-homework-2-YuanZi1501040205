@@ -86,7 +86,7 @@ def main():
 
     if args.model == 'GA':
         # Fitting a data to a gaussian
-        gaussian_fitting, thresholded_gaussian, segmented_gaussian = fitting_object.fit_gaussian(data_points, args.threshold)
+        gaussian_fitting, thresholded_gaussian, segmented_gaussian = fitting_object.fit_gaussian(data_points, args.threshold, image1)
         output_path = output_dir + "gaussian_fitting_" + str(args.threshold) + "_" + datetime.now().strftime("%m%d-%H%M%S") + ".jpg"
         cv2.imwrite(output_path, gaussian_fitting)
         output_path = output_dir + "thresholded_gaussian_" + str(args.threshold) + "_" + datetime.now().strftime("%m%d-%H%M%S") + ".jpg"
