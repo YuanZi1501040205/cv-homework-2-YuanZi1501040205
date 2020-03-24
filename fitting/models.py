@@ -84,7 +84,7 @@ class FittingModels:
         os.remove('plotcache.png')
         return im
 
-    def fit_line_ls(self, data_points, threshold):
+    def fit_line_ls(self, data_points, threshold, image1):
         """ Fits a line to the given data points using least squares
         :param data_points: a list of data points
         :param threshold: a threshold value (if > threshold, imples outlier)
@@ -139,6 +139,7 @@ class FittingModels:
         distance = []
         af_thresholded_data_points = []
         af_thresholded_plot_points = []
+        n = len(data_points)
         for i in range(n):
             distance.append(abs(m*data_points[i][0]-data_points[i][1]+c)/math.sqrt(m*m+1))
             if distance[i] > threshold:
@@ -157,8 +158,7 @@ class FittingModels:
         os.remove('plotcache.png')
 
         #segmented_ls
-        image1 = cv2.imread('2-in000001.jpg', 0)
-        bf_denoise_seg_array = np.reshape(af_thresholded_data_points, (240, 320))
+        bf_denoise_seg_array = np.reshape(af_thresholded_data_points, (image1.shape[0], image1.shape[1]))
         bf_denoise_seg_array = np.array(bf_denoise_seg_array, dtype=np.uint8)
         # plt.imshow(bf_denoise_seg_array, cmap='gray', vmin=0, vmax=255)
         # plt.show()
@@ -175,7 +175,7 @@ class FittingModels:
         print("LS")
         return (im_line_fitting_ls, thresholded_ls, img_dilation)
 
-    def fit_line_robust(self, data_points, threshold):
+    def fit_line_robust(self, data_points, threshold, image1):
         """ Fits a line to the given data points using robust estimators
         :param data_points: a list of data points
         :param threshold: a threshold value (if > threshold, imples outlier)
@@ -291,8 +291,7 @@ class FittingModels:
         os.remove('plotcache.png')
 
         #segmented_ls
-        image1 = cv2.imread('2-in000001.jpg', 0)
-        bf_denoise_seg_array = np.reshape(af_thresholded_data_points, (240, 320))
+        bf_denoise_seg_array = np.reshape(af_thresholded_data_points, (image1.shape[0], image1.shape[1]))
         bf_denoise_seg_array = np.array(bf_denoise_seg_array, dtype=np.uint8)
         # plt.imshow(bf_denoise_seg_array, cmap='gray', vmin=0, vmax=255)
         # plt.show()
