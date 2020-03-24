@@ -79,9 +79,9 @@ class FittingModels:
         #create figure and read it as image object
         fig = plt.figure()
         plt.plot(x, y, 'bo')
-        fig.savefig('plotcache.jpg')
-        im = cv2.imread('plotcache.jpg')
-        os.remove('plotcache.jpg')
+        fig.savefig('plotcache.png')
+        im = cv2.imread('plotcache.png')
+        os.remove('plotcache.png')
         return im
 
     def fit_line_ls(self, data_points, threshold):
@@ -128,9 +128,9 @@ class FittingModels:
         plt.scatter(X, Y, c='#ef5423', label='Data')
 
         plt.show()
-        plt.savefig('plotcache.jpg')
-        im_line_fitting_ls = cv2.imread('plotcache.jpg')
-        os.remove('plotcache.jpg')
+        plt.savefig('plotcache.png')
+        im_line_fitting_ls = cv2.imread('plotcache.png')
+        os.remove('plotcache.png')
 
         #thresholded_ls
         import math
@@ -152,9 +152,9 @@ class FittingModels:
         plt.scatter(X, Y, c='#ef5423', label='Data')
         plt.legend()
         plt.show()
-        plt.savefig('plotcache.jpg')
-        thresholded_ls = cv2.imread('plotcache.jpg')
-        os.remove('plotcache.jpg')
+        plt.savefig('plotcache.png')
+        thresholded_ls = cv2.imread('plotcache.png')
+        os.remove('plotcache.png')
 
         #segmented_ls
         image1 = cv2.imread('2-in000001.jpg', 0)
@@ -261,9 +261,9 @@ class FittingModels:
 
         plt.legend()
         plt.show()
-        plt.savefig('plotcache.jpg')
-        im_line_fitting_ls = cv2.imread('plotcache.jpg')
-        os.remove('plotcache.jpg')
+        plt.savefig('plotcache.png')
+        im_line_fitting_ls = cv2.imread('plotcache.png')
+        os.remove('plotcache.png')
 
         # thresholded_ls
         import math
@@ -286,9 +286,9 @@ class FittingModels:
         plt.scatter(X, Y, c='#ef5423', label='Data')
         plt.legend()
         plt.show()
-        plt.savefig('plotcache.jpg')
-        thresholded_ls = cv2.imread('plotcache.jpg')
-        os.remove('plotcache.jpg')
+        plt.savefig('plotcache.png')
+        thresholded_ls = cv2.imread('plotcache.png')
+        os.remove('plotcache.png')
 
         #segmented_ls
         image1 = cv2.imread('2-in000001.jpg', 0)
@@ -397,16 +397,16 @@ class FittingModels:
         GA_plot.add_artist(ellipse997)
         GA_plot.scatter(X, Y, c='r', s=2)
         plt.show()
-        plt.savefig('plotcache.jpg')
-        GA_plot_img = cv2.imread('plotcache.jpg')
-        os.remove('plotcache.jpg')
+        plt.savefig('plotcache.png')
+        GA_plot_img = cv2.imread('plotcache.png')
+        os.remove('plotcache.png')
         GA_thresh_fig, GA_thresh = plt.subplots()
 
         GA_thresh.scatter(outlier_points[:, 0], outlier_points[:, 1], c='r', s=2)
         plt.show()
-        plt.savefig('plotcache.jpg')
-        GA_thresh_img = cv2.imread('plotcache.jpg')
-        os.remove('plotcache.jpg')
+        plt.savefig('plotcache.png')
+        GA_thresh_img = cv2.imread('plotcache.png')
+        os.remove('plotcache.png')
         GA_seg_img = np.reshape(segmentation, (240, 320))
 
         # Taking a matrix of size 3 as the kernel
