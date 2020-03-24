@@ -6,6 +6,7 @@ from scipy.odr import Model, Data, ODR
 from scipy.stats import linregress
 from sklearn import linear_model
 import math
+import random
 from matplotlib.patches import Ellipse
 
 # total least square linear regression
@@ -186,15 +187,62 @@ class FittingModels:
         import matplotlib.pyplot as plt
         import numpy as np
         import os
-        # Robust line_fitting_ls: RANSAC
-        # convert points' pair to x, y for fitting
+        # # Robust line_fitting_ls: RANSAC
+        # # convert points' pair to x, y for fitting
+        # X, Y = np.array(data_points).T
+        # # ransac fitting
+        # # Fit line using robust linear model estimation
+        # ransac = linear_model.LinearRegression()
+        # ransac.fit(X.reshape(-1,1), Y.reshape(-1, 1))
+        # m = ransac.coef_
+        # c = ransac.intercept_
+        # random.seed(123) # for testing
+
+        # Reshape image to Nx1 array
         X, Y = np.array(data_points).T
-        # ransac fitting
-        # Fit line using robust linear model estimation
-        ransac = linear_model.LinearRegression()
-        ransac.fit(X.reshape(-1,1), Y.reshape(-1, 1))
-        m = ransac.coef_
-        c = ransac.intercept_
+        max_iter = 1000
+        samples = 2
+        m = 0
+        c = 0
+        inlier_thresh = 2
+        best_fit = [0, 0]
+        top_inlier_count = 0
+        for i in range(max_iter):
+            index = random.sample(range(0, X.shape[0]), samples)
+            point1 = (int(X[index[0]]), int(Y[index[0]]))
+            point2 = (int(X[index[1]]), int(Y[index[1]]))
+            # print(point1, point2)
+            # find least squared line
+            if (point2[0] - point1[0]) == 0:
+                continue
+            m = (point2[1] - point1[1]) / (point2[0] - point1[0])
+            c = point1[1] - m * point1[0]
+
+        # print(m,b)
+
+        # for j in range(x.shape[0]):
+
+        # d = abs(m*x[j] + y[j] + b)/np.sqrt(m**2 + 1**2)
+
+        # print(d.shape)
+
+        # y = mx+b
+
+        # A = m B = 1 C = b
+
+        d = abs(m * X - Y + b) / (np.sqrt(m ** 2 + 1 ** 2))
+
+        # print(d[0:5], "d")
+
+        # print(x[200], y[200])
+
+        # print(d[d>inlier_thresh].size)
+
+        if (d[d < inlier_thresh].size > top_inlier_count):
+            best_fit[0] = m
+            best_fit[1] = c
+
+
         # Printing coefficients
         print("Coefficients")
         print(m, c)
