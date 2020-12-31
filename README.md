@@ -1,4 +1,8 @@
-# Computer Vision
+# Computer Vision - changing detection for surveillance cameras
+| pictures     | detected changing      |
+|------------|-------------|
+| <img src="https://github.com/YuanZi1501040205/cv-homework-2-YuanZi1501040205/blob/master/picture-example.png" width="500"> | <img src="https://github.com/YuanZi1501040205/cv-homework-2-YuanZi1501040205/blob/master/change-detection-result.png" width="250"> |
+
 Homework #2
 
 Due: 03/08/20 11:00 PM
